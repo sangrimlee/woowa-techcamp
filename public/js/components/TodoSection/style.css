@@ -1,0 +1,78 @@
+.todo-section {
+  width: 20rem;
+  min-width: 20rem;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.5rem;
+}
+
+.todo-section-ul {
+  width: 100%;
+  height: calc(100% - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.todo-section-ul::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.todo-section-ul::-webkit-scrollbar-thumb {
+  border: 0.125rem solid transparent;
+  border-radius: 9999px;
+  background: var(--colors-gray-500);
+  background-clip: padding-box;
+}
+
+.todo-section-ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.todo-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 16px;
+  padding: 8px;
+}
+
+.todo-section-header > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-section-header__left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 12px;
+}
+
+.todo-section-header__left > h2 {
+  font-size: 18px;
+}
+.todo-section-header__left > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  background-color: #bdbdbd;
+  border-radius: 50%;
+}
+
+.hover {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
