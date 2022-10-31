@@ -1,0 +1,44 @@
+{
+  "name": "web-baemin-sangrimlee",
+  "version": "1.0.0",
+  "description": "우아한테크캠프 이상림",
+  "keywords": [
+    "node.js",
+    "express",
+    "pug"
+  ],
+  "author": "sangrimlee <contact@sangrim.dev>",
+  "license": "ISC",
+  "homepage": "https://github.com/woowa-techcamp-2022/web-baemin-sangrimlee#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woowa-techcamp-2022/web-baemin-sangrimlee.git"
+  },
+  "bugs": {
+    "url": "https://github.com/woowa-techcamp-2022/web-baemin-sangrimlee/issues"
+  },
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint 'src/**/*.js' 'bin/www' --fix",
+    "format": "prettier --write \"src/**/*.js\" \"bin/www\" \"**/*.pug\"",
+    "dev": "nodemon bin/www",
+    "start": "node bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19",
+    "pug": "^3.0.2",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "@prettier/plugin-pug": "^2.1.1",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}

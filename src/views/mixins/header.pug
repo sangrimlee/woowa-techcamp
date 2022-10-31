@@ -1,0 +1,17 @@
+mixin header(headerTitle="", headerRightLink="", headerRightHref="", headerLeftLabel="")
+  header.header
+    nav.header-nav.container
+      div
+        a.header-link(href=headerRightHref)
+          case headerRightLink
+            when "close"
+              i.close
+            when "arrow-left"
+              i.arrow-left
+            default
+              = headerRightLink
+      div 
+        h1.header-title= headerTitle
+      div
+        button#header-btn.header-btn(disabled)
+          = headerLeftLabel

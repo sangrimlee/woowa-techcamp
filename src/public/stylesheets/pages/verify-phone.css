@@ -1,0 +1,26 @@
+.verify-phone-form {
+  margin-top: 3rem;
+}
+
+.send-code-btn {
+  margin-top: 2rem;
+}
+
+.verify-code-wrap {
+  margin-top: 2rem;
+}
+
+.resend-code-btn {
+  display: block;
+  margin: 2rem 0 0 auto;
+  border: 0;
+  padding: 0;
+  background: none;
+
+  font-size: 1rem;
+  color: var(--colors-primary);
+}
+
+.resend-code-btn:hover {
+  opacity: 0.75;
+}

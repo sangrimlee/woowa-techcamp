@@ -1,0 +1,52 @@
+extends ../../layouts/layout
+include ../../mixins/block-btn
+
+block head
+  link(rel='stylesheet', href='/stylesheets/pages/agree.css')
+
+block main
+  form.form-agree(method='POST')
+    .l-vertical
+      .form-checkbox-group.container
+        h2.title 어서오세요
+          br
+          | 약관동의가 필요합니다.
+        .form-checkbox
+          input#agree-all(type='checkbox', hidden)
+          label(for='agree-all') 
+            i
+            strong 전체동의
+        hr
+        each agreeItem in agreeList
+          .form-checkbox
+            input(
+              id=agreeItem.id,
+              name=agreeItem.id,
+              type='checkbox',
+              required=agreeItem.required,
+              hidden
+            )
+            label(for=agreeItem.id)
+              i
+              span= `${agreeItem.label} ${agreeItem.required ? '(필수)' : '(선택)'}`
+        hr
+        .form-radio
+          input#age-over(name='age', type='radio', checked, hidden)
+          label(for='age-over') 
+            i
+            div
+              strong 만 14세 이상입니다.
+          img(src='/images/age-over.png', alt='')
+        .form-radio
+          input#age-under(name='age', type='radio', hidden)
+          label(for='age-under')
+            i 
+            div 
+              strong 만 14세 미만입니다.
+              span 본인확인이 된 보호자의 배민계정이 필요해요.
+          img(src='/images/age-under.png', alt='')
+      .container
+        +block-btn("다음으로", true, "next-btn")(type='submit', disabled)
+
+block script
+  script(src='/javascripts/agree.js', type='module') 

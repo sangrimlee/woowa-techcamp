@@ -1,0 +1,38 @@
+extends ../layouts/layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/pages/index.css')
+
+block main
+  section.banner-section
+    img(src='images/banner.png')
+  section
+    a.login-link(href=session ? '/my' : '/auth/sign-in')
+      img(src='images/profile.png', alt='프로필 이미지', width='68px', height='68px')
+      span 
+        if session
+          = `고마운 분, ${session.nickname}`
+        else
+          = '로그인해주세요.'
+  section.my-menu-section
+    ul.my-menu-list
+      each myMenuItem in myMenuList
+        li.my-menu-item
+          img(src=myMenuItem.imgSrc, width='40', height='40') 
+          span= myMenuItem.label
+  section.ad-section
+    img(src='images/sprout.png', width='50', height='44')
+    span 일회용품 덜 쓰기, 함께해요!
+  section.menu-list-section
+    ul.menu-list
+      each menuItem in menuList
+        li
+          a.menu-item(href=menuItem.href)
+            .menu-item-content
+              .menu-title-wrap
+                span.menu-title= menuItem.title
+                if menuItem.isNew
+                  span.badge NEW
+              if menuItem.description
+                p.menu-description= menuItem.description
+            i.chevron-forward

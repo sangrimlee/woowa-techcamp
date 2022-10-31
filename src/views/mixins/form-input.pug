@@ -1,0 +1,12 @@
+mixin form-input(id, labelText="", showDeleteBtn=false, showCheckIcon=false, classNames="")
+  div(class=`form-input ${classNames}`)
+    if labelText
+      label(for=id)= labelText
+    .form-input-wrap
+      input(id=id)&attributes(attributes)
+      if showDeleteBtn
+        button.delete-btn(type='button')
+          i.close-circle-icon
+      if showCheckIcon
+        i.check-icon
+    p.form-input-error

@@ -1,0 +1,37 @@
+extends ../../layouts/layout
+include ../../mixins/form-input
+
+block head
+  link(rel='stylesheet', href='/stylesheets/pages/additional-info.css')
+
+block main
+  .container.addtional-info-container
+    form.additional-info-form
+      p.form-error-message.hidden
+      .email-wrap
+        +form-input("email", "이메일", true, true, "email-input")(
+          type='email',
+          name='email',
+          placeholder='이메일을 입력하세요.'
+        )
+        button.check-duplicate-btn.theme-btn-default(type='button', disabled) 중복확인
+      .additional-input-wrap.hidden
+        +form-input("nickname", "닉네임", true, true, "nickname-input")(
+          type='text',
+          name='nickname',
+          placeholder='닉네임을 입력하세요.'
+        )
+        +form-input("password", "비밀번호", true, true, "password-input")(
+          type='password',
+          name='password',
+          placeholder='비밀번호를 입력하세요.'
+        )
+        +form-input("birthday", "생년월일", true, true, "birthday-input")(
+          type='text',
+          name='birthday',
+          placeholder='예) 2000.01.01',
+          maxLength=10
+        )
+
+block script
+  script(src='/javascripts/additional-info.js', type='module') 

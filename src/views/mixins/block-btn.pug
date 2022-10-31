@@ -1,0 +1,4 @@
+mixin block-btn(label="버튼", primary=false, _class="")
+  button(
+    class=`block-btn ${primary ? "theme-btn-primary" : "theme-btn-default"} ${_class}`
+  )&attributes(attributes)= label
