@@ -1,0 +1,34 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remote SSH Commands
+        uses: fifsky/ssh-action@v0.0.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          command: |
+            # web-fleemark-05 디렉토리 이동
+            cd web-fleemarket-05
+            # Checkout main branch
+            git checkout main
+            # Pull main branch
+            git pull
+            # Install dependencies
+            yarn
+            # Build client
+            yarn client:build
+            # Build server
+            yarn server:build
+            # Pm2 start
+            pm2 reload deploy
+        

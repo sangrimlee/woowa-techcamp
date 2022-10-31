@@ -1,0 +1,20 @@
+{
+  "React Typescript Functional Component": {
+    "prefix": "rtfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface ${TM_FILENAME_BASE/^([^-]*)-([^.]*).*/${1:/pascalcase}${2:/pascalcase}/}Props {}",
+      "",
+      "export default function ${TM_FILENAME_BASE/^([^-]*)-([^.]*).*/${1:/pascalcase}${2:/pascalcase}/}({}: ${TM_FILENAME_BASE/^([^-]*)-([^.]*).*/${1:/pascalcase}${2:/pascalcase}/}Props) {",
+      "  return <div>${TM_FILENAME_BASE/^([^-]*)-([^.]*).*/${1:/pascalcase}${2:/pascalcase}/}</div>;",
+      "}"
+    ],
+    "description": "React Typescript Functional Component"
+  },
+  "React Styled Component Theme": {
+    "prefix": "stheme",
+    "body": ["${({theme}) => ()};"],
+    "description": "React Styled Component Theme"
+  }
+}
