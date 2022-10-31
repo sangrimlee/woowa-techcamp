@@ -1,0 +1,83 @@
+.header {
+  height: 12rem;
+  color: var(--colors-off-white);
+  background-color: var(--colors-primary);
+}
+
+.header__container {
+  position: relative;
+  height: calc(100% - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+}
+
+.header-calendar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.header-calendar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-calendar__month {
+  text-align: center;
+  width: 6rem;
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.header-calendar__year {
+  font-size: 1.375rem;
+}
+
+.header-calendar__button--prev > svg,
+.header-calendar__button--next > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.header-calendar__button--prev:hover,
+.header-calendar__button--next:hover {
+  opacity: 0.75;
+}
+
+.header__navigation {
+  display: flex;
+}
+
+.header__navigation--link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0.5;
+}
+
+.header__navigation--link > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header__navigation--link:hover {
+  opacity: 0.75;
+}
+
+.header__navigation--link.active {
+  opacity: 1;
+}

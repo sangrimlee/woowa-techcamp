@@ -1,0 +1,86 @@
+.modal__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: var(--z-index-modal);
+}
+
+.modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: var(--z-index-modal-backdrop);
+}
+
+.modal__content {
+  position: relative;
+  width: 100%;
+  max-width: 25rem;
+  padding: 2.25rem 2rem 2rem 2rem;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  z-index: var(--z-index-modal);
+  background-color: var(--colors-off-white);
+}
+
+.modal__title {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--colors-text-active);
+}
+
+.modal__description {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  color: var(--colors-body);
+}
+
+.modal__content > input {
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  border: 1px solid var(--colors-line);
+  border-radius: 0.625rem;
+  background-color: var(--colors-background);
+  transition: all 0.2s ease-in;
+}
+
+.modal__content > input:focus {
+  border-color: var(--colors-primary);
+}
+
+.modal__button-conatiner {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1rem;
+}
+
+.modal__cancel-btn {
+  color: var(--colors-label);
+}
+
+.modal__submit-btn {
+  color: var(--colors-primary);
+}
+
+.modal__cancel-btn,
+.modal__submit-btn {
+  font-weight: 500;
+  transition: opacity 0.2s ease-in;
+}
+
+.modal__cancel-btn:hover,
+.modal__submit-btn:hover {
+  opacity: 0.75;
+}
