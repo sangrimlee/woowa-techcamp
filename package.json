@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "server:build": "yarn workspace server build",
+    "server:start": "yarn workspace server start:prod",
+    "server:dev": "yarn workspace server start:dev",
+    "client:build": "yarn workspace client build",
+    "client:dev": "yarn workspace client start",
+    "build": "yarn server:build && yarn client:build",
+    "start": "yarn:build && yarn server:start",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.30.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
+}

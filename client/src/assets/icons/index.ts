@@ -1,0 +1,10 @@
+export { ReactComponent as StoreIcon } from './store.svg';
+export { ReactComponent as EatIcon } from './eat.svg';
+export { ReactComponent as BadgeIcon } from './badge.svg';
+export { ReactComponent as CloseIcon } from './close.svg';
+export { ReactComponent as PlusIcon } from './plus.svg';
+export { ReactComponent as MinusIcon } from './minus.svg';
+export { ReactComponent as CheckIcon } from './check.svg';
+export { ReactComponent as CoinIcon } from './coin.svg';
+export { ReactComponent as CreditCardIcon } from './credit-card.svg';
+export { ReactComponent as LoadingIcon } from './loading.svg';
